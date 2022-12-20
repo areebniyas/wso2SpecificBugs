@@ -19,6 +19,55 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+
+class FederatedAuthenticator implements ApplicationAuthenticator {
+
+    private int number;
+    private static final long serialVersionUID = 123;
+
+    @Override
+    public boolean canHandle(HttpServletRequest request) {
+
+        return false;
+    }
+
+    @Override
+    public AuthenticatorFlowStatus process(HttpServletRequest request, HttpServletResponse response, AuthenticationContext context) throws AuthenticationFailedException, LogoutFailedException {
+
+        return null;
+    }
+
+    @Override
+    public String getContextIdentifier(HttpServletRequest request) {
+
+        return null;
+    }
+
+    @Override
+    public String getName() {
+
+        return null;
+    }
+
+    @Override
+    public String getFriendlyName() {
+
+        return null;
+    }
+
+    @Override
+    public String getClaimDialectURI() {
+
+        return null;
+    }
+
+    @Override
+    public List<Property> getConfigurationProperties() {
+
+        return null;
+    }
+}
+
 class myClass {
 
     private int number;
@@ -295,50 +344,3 @@ class BasicAuthenticator extends AbstractApplicationAuthenticator {
     }
 }
 
-class FederatedAuthenticator implements ApplicationAuthenticator {
-
-    private int number;
-    private static final long serialVersionUID = 123;
-
-    @Override
-    public boolean canHandle(HttpServletRequest request) {
-
-        return false;
-    }
-
-    @Override
-    public AuthenticatorFlowStatus process(HttpServletRequest request, HttpServletResponse response, AuthenticationContext context) throws AuthenticationFailedException, LogoutFailedException {
-
-        return null;
-    }
-
-    @Override
-    public String getContextIdentifier(HttpServletRequest request) {
-
-        return null;
-    }
-
-    @Override
-    public String getName() {
-
-        return null;
-    }
-
-    @Override
-    public String getFriendlyName() {
-
-        return null;
-    }
-
-    @Override
-    public String getClaimDialectURI() {
-
-        return null;
-    }
-
-    @Override
-    public List<Property> getConfigurationProperties() {
-
-        return null;
-    }
-}
